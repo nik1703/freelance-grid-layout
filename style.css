@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+
+:root {
+	font-size: 62.5%;
+	font-family: "Roboto", sans-serif;
+}
+
+/* --------------- Header --------------- */
+
+.header {
+	width: 100vw;
+	height: 30rem;
+	background: url(./images/header.jpg) center / cover no-repeat;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+}
+
+.img-1 {
+	width: 20rem;
+	height: 15vh;
+	z-index: 1;
+	position: relative;
+	top: 2rem;
+}
+
+h1 {
+	z-index: 2;
+	position: absolute;
+	top: 40%;
+	font-size: 4rem;
+	color: orange;
+	text-shadow: 5px 5px 5px black;
+}
+
+/* -------------- Navbar ---------------- */
+
+nav {
+	width: 100vw;
+	height: 5rem;
+	background-color: black;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 3vw;
+}
+
+nav > ul {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+nav > ul > li > a {
+	color: white;
+	font-size: 1.6rem;
+}
+
+li > a:hover {
+	border-bottom: 2px solid white;
+}
+
+/* ---------------- Section 1 ------------------ */
+
+.section-1 {
+	height: 75vh;
+	/* width: 100vw; */
+	margin: 5rem 10rem;
+	background-color: rgba(224, 221, 221, 0.5);
+	position: relative;
+}
+
+.container-1 {
+	height: 100%;
+	width: 100%;
+	padding: 2rem 0;
+	/* width: 50%;
+    border-right: 3px solid black; */
+	display: grid;
+	grid-template-areas:
+		" . lorem-1 dot-1 . . "
+		" . . dot-2 lorem-2 ."
+		" . lorem-3 dot-3 . ."
+		" . . dot-4 lorem-4 .";
+	grid-template-columns: 1fr 4fr 2fr 4fr 1fr;
+	grid-template-rows: 3fr 3fr 3fr 3fr;
+}
+
+.lorem-1,
+.lorem-2,
+.lorem-3,
+.lorem-4 {
+	height: 100%;
+	font-size: 1.3rem;
+	margin: auto;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+.lorem-1,
+.lorem-3 {
+	border: 3px solid rgba(61, 150, 233, 0.6);
+}
+
+.lorem-2,
+.lorem-4 {
+	border: 3px solid rgba(233, 193, 61, 0.6);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.lorem-1 {
+	grid-area: lorem-1;
+}
+
+.lorem-2 {
+	grid-area: lorem-2;
+}
+
+.lorem-3 {
+	grid-area: lorem-3;
+}
+
+.lorem-4 {
+	grid-area: lorem-4;
+}
+
+/* ------------- Section 1 Middle Dots -------------- */
+
+.dot-1,
+.dot-2,
+.dot-3,
+.dot-4 {
+	content: "";
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+	align-self: center;
+	justify-self: center;
+	z-index: 2;
+}
+
+.dot-1 {
+	grid-area: dot-1;
+	background-color: rgb(18, 135, 173);
+}
+
+.dot-2 {
+	grid-area: dot-2;
+	background-color: rgb(233, 157, 16);
+}
+
+.dot-3 {
+	grid-area: dot-3;
+	background-color: rgb(18, 135, 173);
+}
+
+.dot-4 {
+	grid-area: dot-4;
+	background-color: rgb(233, 157, 16);
+}
+
+/* --------------- Section 1 Middle Line ----------------- */
+
+.split {
+	height: 93%;
+	position: absolute;
+	left: 49.9%;
+	border-right: 3px solid rgba(105, 104, 104, 0.123);
+}
+
+/* -------------- Section 2 ---------------- */
+
+.section-2 {
+	height: 33vh;
+	margin: 5rem 10rem;
+	background-color: rgba(224, 221, 221, 0.5);
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.sec-2-box-1,
+.sec-2-box-2,
+.sec-2-box-3 {
+	height: 80%;
+	width: 45%;
+	font-size: 1.3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1.5rem;
+	transition: all 0.3s ease;
+}
+
+.sec-2-box-1 {
+	background-color: orange;
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.sec-2-box-2 {
+	background-color: lightblue;
+	z-index: 2;
+	position: absolute;
+	top: 10%;
+	left: 30%;
+}
+
+.sec-2-box-3 {
+	background-color: rgb(238, 57, 238);
+	z-index: 3;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+/* -------------- Section 2 Hover --------------- */
+
+.sec-2-box-1:hover {
+	z-index: 5;
+}
+
+.sec-2-box-2:hover {
+	z-index: 5;
+}
+
+.sec-2-box-3:hover {
+	z-index: 5;
+}
+
+.section-2:hover .box {
+	transition: all 1.1s;
+	opacity: 0.5;
+}
+
+.section-2 .box:hover {
+	box-shadow: 0px 0px 15px rgb(68, 68, 68);
+	transform: scale(1.05);
+	transition: all 1.1s;
+	opacity: 1;
+}
+
+/* ------------- Footer ---------------- */
+
+footer {
+	width: 100vw;
+	height: 5rem;
+	background-color: black;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 0 3vw;
+	color: white;
+	font-size: 1rem;
+}
+
+footer > div {
+	display: flex;
+	font-display: row;
+	align-items: center;
+}
+
+/* ------------ Home Button ---------------- */
+
+.home-button {
+	position: fixed;
+	bottom: 0.5rem;
+	right: 0.5rem;
+	border: 2px solid orange;
+	border-radius: 5px;
+	background-color: white;
+	color: orange;
+	height: 4rem;
+	width: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+}
+
+.home-button:hover {
+	transition: 0.5s ease;
+	scale: 1.1;
+}
+
+/* --------------- Responsive ------------------ */
+
+@media (min-width: 0px) and (max-width: 768px) {
+	h1 {
+		text-align: center;
+	}
+
+	.section-1 {
+		height: 100%;
+		margin: 2rem 4rem;
+	}
+
+	.section-2 {
+		height: 50vh;
+		margin: 2rem 4rem;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 993px) {
+	.section-1 {
+		height: 100%;
+		margin: 2rem 4rem;
+	}
+
+	.section-2 {
+		height: 40vh;
+		margin: 2rem 4rem;
+	}
+}
